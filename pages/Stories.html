@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Success Stories - Unlocked Potential Coaching</title>
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/assets/favicon/site.webmanifest">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        .hero {
+            background: url('/assets/Squat.png') no-repeat center center/cover;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="/assets/logo.png" alt="Unlocked Potential Coaching Logo">
+            </div>
+            <nav class="nav-links">
+                <a href="/index.html">Home</a>
+                <a href="/pages/about.html">About Page</a>
+                <a href="#" class="active">Success Stories</a>
+                <a href="/index.html#pricing" class="cta-link">Pricing</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <h1>Success Stories</h1>
+        <p>Hear from our clients who have unlocked their potential with us.</p>
+    </section>
+
+    <section class="sections">
+        <div class="section">
+            <h2>John's Transformation</h2>
+            <p>John joined our coaching program with a goal to lose weight and build muscle. Over the course of 6
+                months, he lost 20kg and gained significant muscle mass. His dedication and our personalized coaching
+                plan helped him achieve his goals.</p>
+            <div class="overlay-effect"></div>
+        </div>
+        <div class="section">
+            <h2>Emily's Journey</h2>
+            <p>Emily came to us wanting to improve her strength for her powerlifting competitions. With our specialized
+                powerlifting coaching, she broke her personal records in all three lifts within a year and competed at
+                the national level.</p>
+            <div class="overlay-effect"></div>
+        </div>
+        <div class="section">
+            <h2>Mike's Success</h2>
+            <p>Mike had always struggled with staying consistent with his fitness routine. Through our online coaching
+                program, he found the support and motivation he needed to stick with his plan, resulting in a healthier
+                and more active lifestyle.</p>
+            <div class="overlay-effect"></div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Unlocked Potential Coaching. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const hoverElements = document.querySelectorAll('.section');
+
+            hoverElements.forEach(element => {
+                element.addEventListener('mousemove', function (e) {
+                    const rect = element.getBoundingClientRect();
+                    const x = e.clientX - rect.left;
+                    const y = e.clientY - rect.top;
+
+                    element.style.setProperty('--x', `${x}px`);
+                    element.style.setProperty('--y', `${y}px`);
+                });
+
+                element.addEventListener('mouseleave', function () {
+                    element.style.setProperty('--x', `50%`);
+                    element.style.setProperty('--y', `50%`);
+                });
+            });
+        });
+    </script>
+
+</body>
+
+</html>
