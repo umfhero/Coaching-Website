@@ -39,13 +39,17 @@ header h1 {
 
 .logo img {
     height: 50px;
-    /* Adjust this size according to your logo */
     width: auto;
 }
 
+
+
+/* Hide the navigation links on mobile by default */
 .nav-links {
     display: flex;
     gap: 20px;
+    justify-content: flex-end;
+    flex: 1;
 }
 
 .nav-links a {
@@ -91,13 +95,11 @@ header h1 {
     background: url('/assets/pic1.jpg') no-repeat center;
     background-size: cover;
     background-position: center middle;
-    /* Adjust this line to move the image down */
     border-radius: 16px;
     position: relative;
     z-index: 1;
     color: white;
     margin: 0 auto;
-    /* Center the hero section */
 }
 
 .hero::before {
@@ -108,7 +110,6 @@ header h1 {
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.4);
-    /* Dark overlay for readability */
     z-index: -1;
     border-radius: 16px;
 }
@@ -141,9 +142,7 @@ header h1 {
 
 .hero a:hover {
     transform: scale(1.1);
-    /* Slightly increase size on hover */
     background-color: hsl(165, 82.26%, 51.37%);
-    /* Green color on hover */
     box-shadow: 0 0 15px 2px hsl(165, 82.26%, 51.37%);
 }
 
@@ -243,13 +242,11 @@ header h1 {
     margin-top: 20px;
     position: relative;
     z-index: 2;
-    /* Ensure button is above gradient effect */
     transition: background-color 0.3s ease, box-shadow 400ms ease, transform 200ms ease;
 }
 
 .cta:hover {
     background-color: hsl(165, 82.26%, 51.37%);
-    /* Mint Green color on hover */
     box-shadow: 0 0 15px 2px hsl(165, 82.26%, 51.37%);
     transform: scale(1.05);
 }
@@ -322,14 +319,12 @@ footer {
     animation: gradient-animation 5s ease infinite;
 }
 
-/* Lowering the opacity of the cursor gradient hover effect */
 .overlay-effect {
     position: absolute;
     inset: 0;
     pointer-events: none;
     user-select: none;
     opacity: 0.2;
-    /* Lower opacity */
     transition: 400ms ease-in-out;
     border-radius: inherit;
 }
@@ -378,27 +373,79 @@ footer {
     background: radial-gradient(circle at var(--x) var(--y), hsl(48, 100%, 67%, 0.2), transparent 50%);
 }
 
-/* Adding box-shadow and cursor gradient effect to the pricing section on hover */
 .card:nth-child(1):hover {
     box-shadow: 0 0 15px 2px hsl(338.69, 100%, 48.04%);
-    /* Pink shadow */
     transform: scale(1.05);
 }
 
 .card:nth-child(2):hover {
     box-shadow: 0 0 15px 2px hsl(338.69, 100%, 48.04%);
-    /* Pink shadow */
     transform: scale(1.05);
 }
 
 .card:nth-child(1):hover .overlay-effect {
     opacity: 1;
     background: radial-gradient(circle at var(--x) var(--y), hsl(338.69, 100%, 48.04%, 0.2), transparent 50%);
-    /* Pink gradient */
 }
 
 .card:nth-child(2):hover .overlay-effect {
     opacity: 1;
     background: radial-gradient(circle at var(--x) var(--y), hsl(338.69, 100%, 48.04%, 0.2), transparent 50%);
-    /* Pink gradient */
+
+}
+
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+    }
+
+    .nav-links {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .sections {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        width: 100%;
+    }
+
+    .card {
+        flex: 1 1 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .cta,
+    .cta-link {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+
+    .card__heading {
+        font-size: 28px;
+    }
+
+    .card__price {
+        font-size: 24px;
+    }
+
+    .sections {
+        padding: 10px;
+    }
 }

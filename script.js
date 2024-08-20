@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
     hoverElements.forEach(element => {
         const overlay = document.createElement("div");
         overlay.classList.add("overlay-effect");
-        element.style.position = 'relative';  // Ensure the parent element is positioned
+        element.style.position = 'relative';
         element.appendChild(overlay);
 
         element.addEventListener("mousemove", (e) => {
@@ -20,5 +20,14 @@ document.addEventListener("DOMContentLoaded", function () {
         element.addEventListener("mouseleave", () => {
             overlay.style.setProperty('--opacity', '0');
         });
+    });
+
+    // Hamburger menu functionality
+    const hamburgerMenu = document.getElementById("hamburger-menu");
+    const navLinks = document.querySelector(".nav-links");
+
+    hamburgerMenu.addEventListener("click", function () {
+        hamburgerMenu.classList.toggle("open");
+        navLinks.classList.toggle("active");
     });
 });
