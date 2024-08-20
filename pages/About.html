@@ -13,27 +13,24 @@
     <style>
 
         .profile-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-wrap: wrap;
-            padding: 20px;
-            gap: 20px;
-        }
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center the profiles horizontally */
+    gap: 15px; /* Adjust the gap between profile images */
+    flex-wrap: nowrap; /* Prevent wrapping to the next line */
+    padding: 20px;
+}
 
-        .profile {
-            text-align: center;
-            margin: 20px;
-        }
+.profile {
+    margin: 0;
+}
 
-        .profile img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            object-fit: cover;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s ease;
-        }
+.profile img {
+    width: 150px; /* Adjust the size as needed */
+    height: 150px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
 
         .profile img:hover {
             transform: scale(1.1);
