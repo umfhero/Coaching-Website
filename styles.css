@@ -12,11 +12,12 @@ body {
     background-color: #212121;
     color: #ddd;
     margin: 0;
+    margin-top: 3%;
     padding: 0;
 }
 
 header {
-    background: #2b2b2b;
+    background: #00000009;
     color: #eceff1;
     padding: 20px;
     text-align: center;
@@ -32,13 +33,23 @@ header h1 {
 }
 
 .header-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     background: #2b2b2b;
     padding: 10px 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 15px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    width: calc(100% - 40px);
+    margin: 10px;
 }
+
+
 
 .logo img {
     height: 50px;
@@ -62,7 +73,7 @@ header h1 {
     border-radius: 2px;
 }
 
-/* Hide the navigation links on mobile by default */
+
 .nav-links {
     display: flex;
     gap: 20px;
@@ -444,7 +455,6 @@ footer {
 
     .profile-container {
         gap: 10px;
-        /* Adjust the gap for smaller screens */
     }
 
     .profile img {
@@ -454,7 +464,7 @@ footer {
 
     .profile h3 {
         font-size: 16px;
-        /* Further reduce size for smaller screens */
+     
     }
 }
 
@@ -487,7 +497,7 @@ footer {
 
     .profile-container {
         gap: 25px;
-        /* Adjust the gap for even smaller screens */
+   
     }
 
     .profile img {
@@ -497,14 +507,14 @@ footer {
 
     .profile h3 {
         font-size: 14px;
-        /* Reduce the font size even more */
+ 
     }
 }
 
 @media (max-width: 360px) {
     .profile-container {
         gap: 10px;
-        /* Smaller gap for very small screens */
+
     }
 
     .profile img {
@@ -514,11 +524,11 @@ footer {
 
     .profile h3 {
         font-size: 12px;
-        /* Minimize font size to fit small screens */
+
     }
 }
 
-/* Sidebar styles */
+
 #sidebar-active {
     display: none;
 }
