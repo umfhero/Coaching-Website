@@ -2,7 +2,7 @@
     --secondarycolor: #e03939;
     --color-1: #2b2b2b;
     --text-color: #eceff1;
-    --accent-color: hsl(165, 82.26%, 51.37%);
+    --accent-color: hsla(165, 82%, 51%, 0.301);
 }
 
 body {
