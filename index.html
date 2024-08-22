@@ -102,24 +102,33 @@
 
 <body>
 
-    <header>
-        <div class="header-container">
-            <div class="logo">
-                <img src="/assets/logo.png" alt="Unlocked Potential Coaching Logo">
-            </div>
-            <div id="hamburger-menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <nav class="nav-links">
-                <a href="#" class="active">Home</a>
-                <a href="/pages/About.html">About Page</a>
-                <a href="/pages/Stories.html">Success Stories</a>
-                <a href="#pricing" class="cta-link">Pricing</a>
-            </nav>
+<header>
+    <div class="header-container">
+        <div class="logo">
+            <img src="/assets/logo.png" alt="Unlocked Potential Coaching Logo">
         </div>
-    </header>
+        <input type="checkbox" id="sidebar-active">
+        <label for="sidebar-active" id="hamburger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+        <label id="overlay" for="sidebar-active"></label>
+        <nav class="nav-links links-container">
+            <label for="sidebar-active" class="close-sidebar-button">
+                <svg xmlns="http://www.w3.org/2000/svg" height="32" viewBox="0 -960 960 960" width="32">
+                    <path
+                        d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+                </svg>
+            </label>
+            <a href="#" class="active">Home</a>
+            <a href="/pages/About.html">About Page</a>
+            <a href="/pages/Stories.html">Success Stories</a>
+            <a href="#pricing" class="cta-link">Pricing</a>
+        </nav>
+    </div>
+</header>
+
 
 
 

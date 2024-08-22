@@ -1,5 +1,8 @@
 :root {
     --secondarycolor: #e03939;
+    --color-1: #2b2b2b;
+    --text-color: #eceff1;
+    --accent-color: hsl(165, 82.26%, 51.37%);
 }
 
 body {
@@ -42,7 +45,22 @@ header h1 {
     width: auto;
 }
 
+#hamburger-menu {
+    cursor: pointer;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+}
 
+#hamburger-menu span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: var(--text-color);
+    border-radius: 2px;
+}
 
 /* Hide the navigation links on mobile by default */
 .nav-links {
@@ -79,9 +97,9 @@ header h1 {
 }
 
 .cta-link:hover {
-    background-color: hsl(165, 82.26%, 51.37%);
+    background-color: var(--accent-color);
     transform: scale(1.1);
-    box-shadow: 0 0 15px 2px hsl(0, 0%, 47%);
+    box-shadow: 0 0 15px 2px var(--accent-color);
 }
 
 .hero {
@@ -142,8 +160,8 @@ header h1 {
 
 .hero a:hover {
     transform: scale(1.1);
-    background-color: hsl(165, 82.26%, 51.37%);
-    box-shadow: 0 0 15px 2px hsl(165, 82.26%, 51.37%);
+    background-color: var(--accent-color);
+    box-shadow: 0 0 15px 2px var(--accent-color);
 }
 
 .sections {
@@ -207,22 +225,18 @@ header h1 {
     font-size: 35px;
     font-weight: 600;
     margin-bottom: 10px;
-    
 }
 
 .card__price {
     color: rgba(255, 255, 255, 0.486);
     font-weight: 700;
     margin-bottom: 40px;
-
-    
 }
 
 .original-price {
     text-decoration: line-through;
     color: #e43f3fab;
     margin-right: 10px;
-    
 }
 
 .discounted-price {
@@ -246,8 +260,8 @@ header h1 {
 }
 
 .cta:hover {
-    background-color: hsl(165, 82.26%, 51.37%);
-    box-shadow: 0 0 15px 2px hsl(165, 82.26%, 51.37%);
+    background-color: var(--accent-color);
+    box-shadow: 0 0 15px 2px var(--accent-color);
     transform: scale(1.05);
 }
 
@@ -260,6 +274,7 @@ header h1 {
     color: white;
     text-align: center;
 }
+
 .testimonials-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -297,6 +312,7 @@ footer {
     padding: 20px;
     transition: background 400ms ease, box-shadow 400ms ease, transform 200ms ease;
 }
+
 @keyframes gradient-animation {
     0% {
         background-position: 0% 50%;
@@ -331,13 +347,13 @@ footer {
 
 .section:nth-child(1):hover {
     background: transparent;
-    box-shadow: 0 0 15px 2px hsl(165, 82.26%, 51.37%);
+    box-shadow: 0 0 15px 2px var(--accent-color);
     transform: scale(1.05);
 }
 
 .section:nth-child(1):hover .overlay-effect {
     opacity: 1;
-    background: radial-gradient(circle at var(--x) var(--y), hsl(165, 82.26%, 51.37%, 0.2), transparent 50%);
+    background: radial-gradient(circle at var(--x) var(--y), var(--accent-color, 0.2), transparent 50%);
 }
 
 .section:nth-child(2):hover {
@@ -391,7 +407,6 @@ footer {
 .card:nth-child(2):hover .overlay-effect {
     opacity: 1;
     background: radial-gradient(circle at var(--x) var(--y), hsl(338.69, 100%, 48.04%, 0.2), transparent 50%);
-
 }
 
 @media (max-width: 768px) {
@@ -422,27 +437,28 @@ footer {
     .card {
         flex: 1 1 100%;
     }
-    .profile {
-    margin: 0px;
 
+    .profile {
+        margin: 0px;
     }
-                .profile-container {
-                    gap: 10px;
-                    /* Adjust the gap for smaller screens */
-                }
-                .profile img {
-                    width: 100px;
-                    height: 100px;
-                }
-        .profile h3 {
-            font-size: 16px;
-            /* Further reduce size for smaller screens */
-        }
-                          
+
+    .profile-container {
+        gap: 10px;
+        /* Adjust the gap for smaller screens */
+    }
+
+    .profile img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .profile h3 {
+        font-size: 16px;
+        /* Further reduce size for smaller screens */
+    }
 }
 
 @media (max-width: 480px) {
-    
     .hero h1 {
         font-size: 28px;
     }
@@ -467,36 +483,95 @@ footer {
 
     .sections {
         padding: 10px;
-        
     }
-                .profile-container {
-                    gap: 25px;
-                    /* Adjust the gap for even smaller screens */
-                }
-                                .profile img {
-                                    width: 70px;
-                                    height: 70px;
-                                }
-        
-    
-                .profile h3 {
-                    font-size: 14px;
-                    /* Reduce the font size even more */
-                }
+
+    .profile-container {
+        gap: 25px;
+        /* Adjust the gap for even smaller screens */
+    }
+
+    .profile img {
+        width: 70px;
+        height: 70px;
+    }
+
+    .profile h3 {
+        font-size: 14px;
+        /* Reduce the font size even more */
+    }
 }
+
 @media (max-width: 360px) {
     .profile-container {
-            gap: 10px;
-            /* Smaller gap for very small screens */
-        }
-    
-        .profile img {
-            width: 50px;
-            height: 50px;
-        }
-    
-        .profile h3 {
-            font-size: 12px;
-            /* Minimize font size to fit small screens */
-        }
+        gap: 10px;
+        /* Smaller gap for very small screens */
+    }
+
+    .profile img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .profile h3 {
+        font-size: 12px;
+        /* Minimize font size to fit small screens */
+    }
+}
+
+/* Sidebar styles */
+#sidebar-active {
+    display: none;
+}
+
+.links-container {
+    flex-direction: row;
+}
+
+#hamburger-menu,
+.close-sidebar-button {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 300px;
+        height: 100%;
+        background-color: var(--color-1);
+        box-shadow: -5px 0 5px rgba(0, 0, 0, 0.25);
+        transition: right 0.75s ease-out;
+        z-index: 10;
+    }
+
+    .nav-links a {
+        width: 100%;
+        padding: 15px 30px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    #hamburger-menu {
+        display: flex;
+    }
+
+    #sidebar-active:checked~.nav-links {
+        right: 0;
+    }
+
+    #sidebar-active:checked~#overlay {
+        height: 100%;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 9;
+        background: rgba(0, 0, 0, 0.5);
+    }
+
+    .close-sidebar-button {
+        display: block;
+        padding: 20px;
+    }
 }
