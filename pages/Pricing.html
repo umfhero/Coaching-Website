@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing - Unlocked Potential Coaching</title>
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/assets/favicon/site.webmanifest">
+    <script async src="https://js.stripe.com/v3/buy-button.js"></script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        .hero {
+            background: url('/assets/Minimal.png') no-repeat center center/cover;
+        }
+        .pricing-highlight {
+            background-color: rgba(224, 57, 57, 0.1);
+            border: 2px solid var(--secondarycolor);
+            padding: 10px;
+            margin-top: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .pricing-highlight h3 {
+            color: var(--secondarycolor);
+            margin-top: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="header-container">
+        <div class="logo">
+            <img src="/assets/logo.png" alt="Unlocked Potential Coaching Logo">
+        </div>
+        <input type="checkbox" id="sidebar-active">
+        <label for="sidebar-active" id="hamburger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+        <label id="overlay" for="sidebar-active"></label>
+        <nav class="nav-links links-container">
+            <label for="sidebar-active" class="close-sidebar-button">
+            <svg xmlns="http://www.w3.org/2000/svg" height="32" viewBox="0 -960 960 960" width="32" fill="#ffffff">
+                <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+            </svg>
+            </label>
+            <a href="/index.html">Home Page</a>
+            <a href="/pages/About.html">About Page</a>
+            <a href="/pages/Stories.html">Success Stories</a>
+            <a href="/pages/Pricing.html" class="active cta-link">Pricing</a>
+        </nav>
+    </div>
+</header>
+
+    <section class="hero">
+        <h1>Our Pricing Plans</h1>
+        <p>Invest in your fitness journey with our flexible coaching options.</p>
+    </section>
+
+    <main class="main flow">
+        <h2 class="section-title">Monthly Packages</h2>
+        <div class="cards">
+            <div class="cards__inner">
+                <!-- Monthly Coaching Packages -->
+                <div class="card">
+                    <h1 class="card__heading">Base Coaching</h1>
+                    <p class="card__price">£49.99 per month</p>
+                    <ul>
+                        <li>Weekly check-ins and replies</li>
+                        <li>Tailored training program</li>
+                        <li>Program modifications as needed</li>
+                        <li>Form checks via video</li>
+                        <li>Email support</li>
+                    </ul>
+                    <div class="cta" onclick="window.open('https://buy.stripe.com/test_aEU6qYb2I2iV1IA4gi', '_blank');">Get Started</div>
+                    <div class="overlay-effect"></div>
+                </div>
+                
+                <!-- Premium Package -->
+                <div class="card">
+                    <h1 class="card__heading gradient-text">Premium Coaching</h1>
+                    <p class="card__price">£79.99 per month</p>
+                    <ul>
+                        <li>Weekly check-ins</li>
+                        <li>Daily replies</li>
+                        <li>Tailored training program</li>
+                        <li>Diet planning</li>
+                        <li>Monthly calls</li>
+                        <li>Discounted powerlifting handling</li>
+                    </ul>
+                    <div class="cta" onclick="window.open('https://buy.stripe.com/test_6oE5mU4Ek4r3bjaeUV', '_blank');">Get Started</div>
+                    <div class="overlay-effect"></div>
+                </div>
+                
+                <!-- 3-Month Package -->
+                <div class="card">
+                    <span class="popular-tag">Most Popular</span>
+                    <h1 class="card__heading premium-gold-text">3-Month Premium</h1>
+                    <p class="card__price">
+                        <span class="original-price">£239.99</span>
+                        <span class="discounted-price">£199.99</span>
+                    </p>
+                    <ul>
+                        <li>Everything in Premium Coaching</li>
+                        <li>Save £40 compared to monthly</li>
+                        <li>3 months of daily support</li>
+                        <li>Priority communications</li>
+                    </ul>
+                    <div class="cta" onclick="window.open('https://buy.stripe.com/test_linkhere', '_blank');">Best Value</div>
+                    <div class="overlay-effect"></div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Training Programs Section -->
+        <h2 class="section-title">Training Programs</h2>
+        <div class="cards">
+            <div class="cards__inner">
+                <!-- 8-Week Program -->
+                <div class="card">
+                    <h1 class="card__heading">8-Week Program</h1>
+                    <p class="card__price">£5.99</p>
+                    <ul>
+                        <li>Structured 8-week training plan</li>
+                        <li>Self-guided program</li>
+                        <li>PDF download</li>
+                        <li>Exercise demonstrations</li>
+                    </ul>
+                    <div class="cta" onclick="window.open('https://buy.stripe.com/link_to_8week', '_blank');">Buy Now</div>
+                    <div class="overlay-effect"></div>
+                </div>
+                
+                <!-- 12-Week Program -->
+                <div class="card">
+                    <h1 class="card__heading">12-Week Program</h1>
+                    <p class="card__price">£7.99</p>
+                    <ul>
+                        <li>Comprehensive 12-week plan</li>
+                        <li>Progressive overload structure</li>
+                        <li>PDF download</li>
+                        <li>Exercise demonstrations</li>
+                    </ul>
+                    <div class="cta" onclick="window.open('https://buy.stripe.com/link_to_12week', '_blank');">Buy Now</div>
+                    <div class="overlay-effect"></div>
+                </div>
+                
+                <!-- 16-Week Program -->
+                <div class="card">
+                    <h1 class="card__heading">16-Week Program</h1>
+                    <p class="card__price">£9.99</p>
+                    <ul>
+                        <li>Extended 16-week training plan</li>
+                        <li>Periodization phases</li>
+                        <li>PDF download</li>
+                        <li>Exercise demonstrations</li>
+                        <li>Monthly progression tracking</li>
+                    </ul>
+                    <div class="cta" onclick="window.open('https://buy.stripe.com/link_to_16week', '_blank');">Buy Now</div>
+                    <div class="overlay-effect"></div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Powerlifting Handling Section -->
+        <h2 class="section-title">Powerlifting Handling</h2>
+        <div class="cards">
+            <div class="cards__inner powerlifting-cards">
+                <!-- Regional Handling -->
+                <div class="card">
+                    <h1 class="card__heading">Regional Competition</h1>
+                    <p class="card__price">from £29.99</p>
+                    <ul>
+                        <li>Pre-competition strategy</li>
+                        <li>Attempt selection assistance</li>
+                        <li>Competition day handling</li>
+                        <li>Warm-up guidance</li>
+                    </ul>
+                    <a href="https://formspree.io/f/mdkekpaw" class="cta" target="_blank">Contact Us</a>
+                    <div class="overlay-effect"></div>
+                </div>
+                
+                <!-- National Handling -->
+                <div class="card">
+                    <h1 class="card__heading gradient-text">National Competition</h1>
+                    <p class="card__price">from £59.99</p>
+                    <ul>
+                        <li>Everything in Regional handling</li>
+                        <li>Advanced competition strategy</li>
+                        <li>Comprehensive attempt planning</li>
+                        <li>Post-competition analysis</li>
+                    </ul>
+                    <a href="https://formspree.io/f/mdkekpaw" class="cta" target="_blank">Contact Us</a>
+                    <div class="overlay-effect"></div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="pricing-highlight">
+            <h3>Not sure which plan is right for you?</h3>
+            <p>Contact us for a free consultation to discuss your goals and find the perfect coaching solution for your needs.</p>
+            <form action="https://formspree.io/f/mdkekpaw" class="fs-form" target="_top" method="POST">
+                <input type="hidden" name="subject" value="Pricing Plan Consultation Request">
+                <div class="fs-field">
+                    <label class="fs-label" for="name-consult">Your Name</label>
+                    <input class="fs-input" id="name-consult" name="name" required />
+                </div>
+                <div class="fs-field">
+                    <label class="fs-label" for="email-consult">Email</label>
+                    <input class="fs-input" id="email-consult" name="email" type="email" required />
+                    <p class="fs-description">This will help us respond to your query via email.</p>
+                </div>
+                <div class="fs-field">
+                    <label class="fs-label" for="message-consult">Message</label>
+                    <textarea class="fs-textarea" id="message-consult" name="message" required></textarea>
+                    <p class="fs-description">What would you like to discuss?</p>
+                </div>
+                <div class="fs-button-group">
+                    <button class="fs-button" type="submit">Contact Us</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Unlocked Potential Coaching. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const hoverElements = document.querySelectorAll('.card');
+
+            hoverElements.forEach(element => {
+                element.addEventListener('mousemove', function (e) {
+                    const rect = element.getBoundingClientRect();
+                    const x = e.clientX - rect.left;
+                    const y = e.clientY - rect.top;
+
+                    element.style.setProperty('--x', `${x}px`);
+                    element.style.setProperty('--y', `${y}px`);
+                });
+
+                element.addEventListener('mouseleave', function () {
+                    element.style.setProperty('--x', `50%`);
+                    element.style.setProperty('--y', `50%`);
+                });
+            });
+        });
+    </script>
+
+</body>
+
+</html>
