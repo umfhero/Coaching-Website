@@ -220,6 +220,7 @@ header h1 {
     gap: 20px;
 }
 
+/* Card structure for consistent button positioning */
 .card {
     flex: 1 1 30%;
     padding: 20px;
@@ -229,6 +230,20 @@ header h1 {
     transition: background 400ms ease, box-shadow 400ms ease, transform 200ms ease;
     position: relative;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* This ensures content is spread out with button at bottom */
+}
+
+.card-content {
+    flex: 1; /* Takes up available space */
+}
+
+/* Button alignment at bottom of card */
+.card .cta {
+    margin-top: auto; /* Pushes the button to the bottom */
+    width: calc(100% - 20px); /* Full width minus padding */
+    box-sizing: border-box;
 }
 
 .card ul {
@@ -980,4 +995,142 @@ footer {
 
 .fs-textarea::placeholder {
   color: #aaa;
+}
+
+/* Updated Formspree Form Styling */
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+/* Form styling variables - adapted to site theme */
+:root {
+  --fs-color-background: #2b2b2b;
+  --fs-color-background-alt: #3f3f3f;
+  --fs-color-border-active: var(--secondarycolor);
+  --fs-color-border-default: #4a4a4a;
+  --fs-color-highlight: var(--accent-color);
+  --fs-color-primary: var(--secondarycolor);
+  --fs-color-primary-active: #c03030;
+  --fs-color-text-default: var(--text-color);
+  --fs-color-text-muted: #aaa;
+  
+  --fs-font-family-body: "Inter", "League Spartan", system-ui, sans-serif;
+}
+
+.fs-form {
+  display: grid;
+  row-gap: 1.5rem;
+  max-width: 500px;
+  margin: 0 auto;
+  background-color: #2b2b2b;
+  padding: 25px;
+  border-radius: 15px;
+}
+
+.fs-field {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.375rem;
+}
+
+.fs-label {
+  color: var(--fs-color-text-default);
+  display: block;
+  font-family: var(--fs-font-family-body);
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.25rem;
+}
+
+.fs-button-group {
+  display: flex;
+  flex-direction: row-reverse;
+  column-gap: 1.5rem;
+}
+
+.fs-button {
+  background-color: var(--fs-color-primary);
+  border-radius: 0.375rem;
+  color: white;
+  cursor: pointer;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1rem;
+  padding: 1rem 2rem;
+  transition-duration: 200ms;
+  transition-property: background-color;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.fs-button:hover {
+  background-color: var(--accent-color);
+  box-shadow: 0 0 15px 2px var(--accent-color);
+}
+
+.fs-input {
+  appearance: none;
+  border-radius: 0.375rem;
+  border-width: 0;
+  box-shadow: var(--fs-color-border-default) 0 0 0 1px inset;
+  color: var(--fs-color-text-default);
+  font-size: 1rem;
+  height: 2.5rem;
+  line-height: 1.5rem;
+  outline: none;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  background-color: #333;
+}
+
+.fs-input:focus-visible {
+  box-shadow: var(--fs-color-border-active) 0 0 0 1.5px inset;
+  outline: 3px solid var(--fs-color-highlight);
+  outline-offset: 0;
+}
+
+.fs-textarea {
+  appearance: none;
+  border-radius: 0.375rem;
+  border-width: 0;
+  box-shadow: var(--fs-color-border-default) 0 0 0 1px inset;
+  color: var (--fs-color-text-default);
+  font-size: 1rem;
+  line-height: 1.5rem;
+  outline: none;
+  padding: 0.5rem 0.75rem;
+  resize: vertical;
+  background-color: #333;
+  min-height: 100px;
+}
+
+.fs-textarea:focus-visible {
+  box-shadow: var(--fs-color-border-active) 0 0 0 1.5px inset;
+  outline: 3px solid var(--fs-color-highlight);
+  outline-offset: 0;
+}
+
+.coming-soon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+}
+
+.coming-soon {
+    background-color: #2b2b2b;
+    border-radius: 15px;
+    padding: 40px;
+    text-align: center;
+    max-width: 800px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.coming-soon h2 {
+    font-size: 42px;
+    margin-bottom: 20px;
+    color: var(--secondarycolor);
+}
+
+.coming-soon p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 15px;
 }
