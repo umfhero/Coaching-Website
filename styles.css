@@ -121,14 +121,20 @@ header h1 {
     height: 70vh;
     width: 80%;
     text-align: center;
-    background: url('/assets/Minimal.png') no-repeat center;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/assets/pics/Both\ clients.jpg') no-repeat center;
     background-size: cover;
-    background-position: center middle;
+    background-position: center 40%; /* Moved down from center middle to 40% down */
     border-radius: 16px;
     position: relative;
     z-index: 1;
     color: white;
     margin: 0 auto;
+    filter: blur(0.5px);
+}
+
+.hero * {
+    /* Make sure the text inside hero isn't blurred */
+    filter: blur(0px);
 }
 
 .hero::before {
@@ -1207,4 +1213,24 @@ footer {
 .card:nth-child(5):hover .overlay-effect {
     opacity: 1;
     background: radial-gradient(circle at var(--x) var(--y), hsl(271, 100%, 50%, 0.2), transparent 50%);
+}
+
+/* Social media links */
+.social-link {
+    display: inline-block;
+    color: var(--secondarycolor);
+    text-decoration: none;
+    margin-top: 8px;
+    padding: 6px 12px;
+    border: 1px solid var(--secondarycolor);
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    font-size: 14px;
+}
+
+.social-link:hover {
+    background-color: var(--secondarycolor);
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(224, 57, 57, 0.3);
 }

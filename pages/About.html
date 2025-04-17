@@ -56,15 +56,21 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            height: 60vh;
+            height: 45vh;
             text-align: center;
-            background: url('/assets/Minimal.png') no-repeat center;
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/assets/pics/both\ clients2.jpg') no-repeat center;
             background-size: cover;
-            background-position: center middle;
+            background-position: center 40%;
             border-radius: 16px;
             position: relative;
             z-index: 1;
             color: white;
+            filter: blur(0.5px);
+        }
+
+        .hero * {
+            /* Make sure the text inside hero isn't blurred */
+            filter: blur(0px);
         }
 
         .hero::before {
@@ -110,7 +116,7 @@
             </label>
             <a href="/index.html">Home</a>
             <a href="/pages/About.html" class="active">About Page</a>
-            <a href="/pages/Stories.html">Success Stories</a>
+            <!-- <a href="/pages/Stories.html">Success Stories</a> -->
             <a href="/index.html#pricing" class="cta-link">Pricing</a>
 
         </nav>
@@ -119,18 +125,27 @@
 
     <section class="hero">
         <h1>About Us</h1>
+        <p>Meet the coaches</p>
     </section>
 
     <section class="profile-container">
         <div class="profile">
-            <img src="/assets/Alex.jpg" alt="Alex - Co-founder">
+            <img src="/assets/pics/Alex pfp.jpg" alt="Alex - Co-founder">
             <h3>Alex Brownett</h3>
             <p>Co-founder</p>
+            <a href="https://www.instagram.com/alexbrownett/" target="_blank" class="social-link">Instagram</a>
         </div>
         <div class="profile">
-            <img src="/assets/Julian.jpg" alt="Julian - Co-founder">
+            <img src="/assets/pics/Julian pfp.jpg" alt="Julian - Co-founder">
             <h3>Julian Popov</h3>
             <p>Co-founder</p>
+            <a href="https://www.instagram.com/julian_popov_/" target="_blank" class="social-link">Instagram</a>
+        </div>
+        <div class="profile">
+            <img src="/assets/pics/unlocked_n.jpg" alt="Unlocked Potential Instagram">
+            <h3>Unlocked Potential</h3>
+            <p>Official Account</p>
+            <a href="https://www.instagram.com/unlockedpotentialcc/" target="_blank" class="social-link">Instagram</a>
         </div>
     </section>
     
